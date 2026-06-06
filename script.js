@@ -20,18 +20,18 @@ async function getQuote() {
   try {
 
     const res = await fetch('/api/quote', {
-  method: 'POST',
-  headers: {
-    'Content-Type': 'application/json'
-  },
-  body: JSON.stringify({
-    type,
-    model,
-    specs,
-    condition,
-    notes
-  })
-});
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        type,
+        model,
+        specs,
+        condition,
+        notes
+      })
+    });
 
     const data = await res.json();
 
